@@ -75,7 +75,6 @@ class _HomePageState extends State<HomePage> {
                   );
                 }
 
-                print(controller.tasks[index - 1].toJson());
                 return Padding(
                   padding: const EdgeInsets.only(bottom: 9),
                   child: TaskWidget(

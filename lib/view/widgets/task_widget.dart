@@ -32,8 +32,13 @@ class _TaskWidgetState extends State<TaskWidget> {
   }
 
   @override
+  void didUpdateWidget(TaskWidget oldWidget) {
+    _completed = widget.completed;
+    super.didUpdateWidget(oldWidget);
+  }
+
+  @override
   Widget build(BuildContext context) {
-    // TODO: Max width
     return AnimatedOpacity(
       opacity: _completed ? 0.5 : 1.0,
       duration: const Duration(milliseconds: 500),
